@@ -9,6 +9,7 @@ import Portfolio from './components/portfolio/portfolio'
 import Testimonials from './components/testimonials/testimonials'
 import Contact from './components/contact/contact'
 import Footer from './components/footer/footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (

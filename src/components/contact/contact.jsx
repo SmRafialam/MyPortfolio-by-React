@@ -14,9 +14,17 @@ const Contact = () => {
 
     const publicKey = 'zztvKqK_CCiXwKN0L';
   
-    emailjs.sendForm('service_1fn07mr', 'template_r4nzs3h', form.current, {
-      publicKey: publicKey,
-    }).then((result) => {
+    // emailjs.sendForm('service_1fn07mr', 'template_r4nzs3h', form.current, {
+    //   publicKey: publicKey,
+    // }).then((result) => {
+    //   console.log(result.text);
+    //   alert("Email Sent");
+    // }).catch((error) => {
+    //   console.log(error.text);
+    //   alert("Error sending email. Please try again later.");
+    // });
+
+    emailjs.sendForm('service_1fn07mr', 'template_r4nzs3h', e.target, publicKey).then((result) => {
       console.log(result.text);
       alert("Email Sent");
     }).catch((error) => {
@@ -38,7 +46,7 @@ const Contact = () => {
           <article className='contact__option'>
             <HiOutlineMail className='contact__option-icon'/>
             <h4>Email</h4>
-            <h5>smrafialam007@gmail.com</h5>
+            <h5 className='email'>smrafialam007@gmail.com</h5>
             <a href="mailto:smrafialam007@gmail.com">Send a message</a>
           </article>
           <article className='contact__option'>
